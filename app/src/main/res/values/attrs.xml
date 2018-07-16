@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="gradientOrientation" format="enum">
+        <enum name="horizontal" value="0"/>
+        <enum name="vertical" value="1"/>
+    </attr>
+
+    <attr name="baseColorOne" format="color"/>
+    <attr name="baseColorTwo" format="color"/>
+    <attr name="baseColorThree" format="color"/>
+
+    <declare-styleable name="GradientTextView">
+        <attr name="gradientOrientation"/>
+        <attr name="baseColorOne"/>
+        <attr name="baseColorTwo"/>
+        <attr name="baseColorThree"/>
+    </declare-styleable>
+
+    <declare-styleable name="GradientView">
+        <attr name="gradientOrientation"/>
+        <attr name="baseColorOne"/>
+        <attr name="baseColorTwo"/>
+        <attr name="baseColorThree"/>
+        <attr name="animationOnStart" format="boolean"/>
+        <attr name="animationLoop" format="boolean"/>
+        <attr name="animationStepDuration" format="integer"/>
+        <attr name="startColorsPositions" format="string"/>
+        <attr name="endColorsPositions" format="string"/>
+        <attr name="baseColors" format="string"/>
+    </declare-styleable>
+</resources>
+
