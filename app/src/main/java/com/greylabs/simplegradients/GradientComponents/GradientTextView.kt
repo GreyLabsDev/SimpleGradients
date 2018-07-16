@@ -34,10 +34,17 @@ open class GradientTextView : TextView {
 		var typedArray = context.obtainStyledAttributes(attributeSet, R.styleable.GradientTextView)
 		var direction = floatArrayOf(0f, 0f)
 
-		var baseColors : ArrayList<Int> = ArrayList()
-		baseColors.add(typedArray.getColor(R.styleable.GradientTextView_baseColorOne, Color.parseColor("#40E0D0")))
-		baseColors.add(typedArray.getColor(R.styleable.GradientTextView_baseColorTwo, Color.parseColor("#56CCF2")))
-		baseColors.add(typedArray.getColor(R.styleable.GradientTextView_baseColorThree, Color.parseColor("#FFFFFF")))
+		var gradientColorsList: ArrayList<Int> = ArrayList()
+		gradientColorsList.add(Color.parseColor("#FFFFFF"))
+		gradientColorsList.add(Color.parseColor("#FFFFFF"))
+		gradientColorsList.add(Color.parseColor("#FFFFFF"))
+
+		typedArray.getString(R.styleable.GradientTextView_baseColors)?.let {
+			gradientColorsList.clear()
+			for (colorString in it.split(",")) {
+				gradientColorsList.add(Color.parseColor(colorString))
+			}
+		}
 
 		this.post {
 			when (typedArray.getInt(R.styleable.GradientTextView_gradientOrientation, 0)) {
@@ -46,7 +53,7 @@ open class GradientTextView : TextView {
 			}
 			Log.d("GradientTextView", Arrays.toString(direction))
 			var shader = LinearGradient(0f, 0f, direction[0], direction[1],
-					baseColors.toIntArray(),null, Shader.TileMode.CLAMP)
+					gradientColorsList.toIntArray(),null, Shader.TileMode.CLAMP)
 			this.paint.shader = shader
 			typedArray.recycle()
 			this.invalidate()

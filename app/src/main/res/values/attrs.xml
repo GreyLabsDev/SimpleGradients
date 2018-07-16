@@ -4,29 +4,21 @@
         <enum name="horizontal" value="0"/>
         <enum name="vertical" value="1"/>
     </attr>
-
-    <attr name="baseColorOne" format="color"/>
-    <attr name="baseColorTwo" format="color"/>
-    <attr name="baseColorThree" format="color"/>
+    <attr name="baseColors" format="string"/>
 
     <declare-styleable name="GradientTextView">
         <attr name="gradientOrientation"/>
-        <attr name="baseColorOne"/>
-        <attr name="baseColorTwo"/>
-        <attr name="baseColorThree"/>
+        <attr name="baseColors"/>
     </declare-styleable>
 
     <declare-styleable name="GradientView">
         <attr name="gradientOrientation"/>
-        <attr name="baseColorOne"/>
-        <attr name="baseColorTwo"/>
-        <attr name="baseColorThree"/>
-        <attr name="animationOnStart" format="boolean"/>
-        <attr name="animationLoop" format="boolean"/>
-        <attr name="animationStepDuration" format="integer"/>
+        <attr name="baseColors"/>
         <attr name="startColorsPositions" format="string"/>
         <attr name="endColorsPositions" format="string"/>
-        <attr name="baseColors" format="string"/>
+        <attr name="animationOnStart" format="boolean"/>
+        <attr name="animationStepDuration" format="integer"/>
+        <attr name="animationLoop" format="boolean"/>
     </declare-styleable>
 </resources>
 
