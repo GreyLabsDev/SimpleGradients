@@ -198,7 +198,7 @@
                 app:baseColors="#D4145A,#FBB03B,#FCEE21,#009245"
                 app:startColorsPositions="0.25,0.50,0.75,1.0"
                 app:endColorsPositions="0.6,0.7,0.8,0.9"
-                app:animationStepDuration="3000"
+                app:animationStepDuration="1500"
                 app:animationOnStart="true"
                 app:animationLoop="true"
                 />
