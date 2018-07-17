@@ -109,9 +109,26 @@ class GradientView : View {
         initGradientShader()
 
         if (gradientPositionsList.size >= 2) {
-            initAnimationQueue()
-            if (animationOnStart) {
-                startAnimation()
+            when {
+                animationOnStart -> {
+                    Log.d("ATTRIBUTES", "onStart")
+                    if (animationLoop) {
+                        gradientPositionsList.add(gradientPositionsList[0])
+                        initAnimationQueue()
+                        gradientAnimatiors.last().setNextAnimator(gradientAnimatiors.first())
+                        Log.d("ATTRIBUTES", "Loop")
+                    } else {
+                        initAnimationQueue()
+                    }
+                    startAnimation()
+                }
+                animationLoop -> {
+                    gradientPositionsList.add(gradientPositionsList[0])
+                    initAnimationQueue()
+                    gradientAnimatiors.last().setNextAnimator(gradientAnimatiors.first())
+                    Log.d("ATTRIBUTES", "Loop")
+                }
+
             }
         }
     }
@@ -177,6 +194,7 @@ class GradientView : View {
     }
     
     fun initAnimationQueue() {
+        gradientAnimatiors.clear()
         if (gradientPositionsList.size == 2) {
             var grAnimator = Animator(paintDrawable, rectShape,
                 gradientPositionsList[0], gradientPositionsList[1], standardDuration, gradientPositionsList[0])
