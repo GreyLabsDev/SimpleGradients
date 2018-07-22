@@ -24,7 +24,7 @@ Attributes:
  - endColorsPositions
  - animationOnStart
  - animationStepDuration
- - animationLoop (in progress)
+ - animationLoop
 
 ### Useful resources
 
