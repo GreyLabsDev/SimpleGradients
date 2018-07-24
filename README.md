@@ -26,7 +26,7 @@ Attributes:
  - animationStepDuration
  - animationLoop
 
-### Useful resources
+### Useful links
 
 [Custom View Components at developer.android.com](https://github.com/mdbloice/Augmentor)
 
