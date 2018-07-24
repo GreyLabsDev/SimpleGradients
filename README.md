@@ -28,6 +28,6 @@ Attributes:
 
 ### Useful links
 
-[Custom View Components at developer.android.com](https://github.com/mdbloice/Augmentor)
+[Custom View Components at developer.android.com](https://developer.android.com/guide/topics/ui/custom-components)
 
-[Android Custom Views Tutorial by Robin Kamboj](https://github.com/mdbloice/Augmentor)
+[Android Custom Views Tutorials by Robin Kamboj](https://medium.com/@robillo/android-custom-views-tutorial-part-1-115fa8d53be5)
